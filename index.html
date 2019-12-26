@@ -55,6 +55,50 @@ var a= new Array(3);
 a[0]=new Array(3);
 a[1]=new Array(3);
 a[2]=new Array(3);
+var i,j;
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+a[i][j]=0;
+}
+}
+function fu()
+{
+if(a[0][0]!=0&&a[0][0]==a[0][1]&&a[0][1]==a[0][2])
+{
+return a[0][0];
+}
+if(a[1][0]!=0&&a[1][0]==a[1][1]&&a[1][1]==a[1][2])
+{
+return a[1][0];
+}
+if(a[2][0]!=0&&a[2][0]==a[2][1]&&a[2][1]==a[2][2])
+{
+return a[2][0];
+}
+if(a[0][0]!=0&&a[0][0]==a[1][0]&&a[1][0]==a[2][0])
+{
+return a[0][0];
+}
+if(a[0][1]!=0&&a[0][1]==a[1][1]&&a[1][1]==a[2][1])
+{
+return a[0][1];
+}
+if(a[0][2]!=0&&a[0][2]==a[1][2]&&a[1][2]==a[2][2])
+{
+return a[0][2];
+}
+if(a[1][1]!=0&&a[1][1]==a[0][0]&&a[0][0]==a[2][2])
+{
+return a[0][0];
+}
+if(a[0][2]!=0&&a[0][2]==a[1][1]&&a[1][1]==a[2][0])
+{
+return a[0][2];
+}
+return 0;
+}
 $("table td").click(function(){
 var c=$(this).index();
 var r=$(this).parent().index();
@@ -62,12 +106,20 @@ var r=$(this).parent().index();
 if(f==true)
 {
 $(this).text("X");
+console.log("hello");
 f=false;
+a[r][c]=1;
 }
 else 
 {
 $(this).text("O");
 f=true;
+a[r][c]=2;
+}
+var z=fu();
+if(z!=0)
+{
+alert(z+" is the winner");
 }
 })
 </script>
