@@ -8,7 +8,8 @@
 td{
 width:70px;
 height:70px;
-border:2px;
+font-size:3em;
+text-align:center;
 }
 .fullb{
 border:2px solid #1C6EA4;
@@ -49,8 +50,25 @@ body {background-color: skyblue;}
   </tr>
 </table>
 <script>
-$("td").click(function(){
-alert("clicked");
+var f=true;
+var a= new Array(3);
+a[0]=new Array(3);
+a[1]=new Array(3);
+a[2]=new Array(3);
+$("table td").click(function(){
+var c=$(this).index();
+var r=$(this).parent().index();
+//alert(r+" "+c);
+if(f==true)
+{
+$(this).text("X");
+f=false;
+}
+else 
+{
+$(this).text("O");
+f=true;
+}
 })
 </script>
 </body>
