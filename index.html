@@ -1,5 +1,57 @@
 <html>
+
+<head>
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap-grid.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+<style>
+td{
+width:70px;
+height:70px;
+border:2px;
+}
+.fullb{
+border:2px solid #1C6EA4;
+}
+.lrb{
+border-left:2px solid #1C6EA4;
+border-right:2px solid #1C6EA4;
+}
+.t{
+border-bottom:2px solid #1C6EA4;
+border-top:2px solid #1C6EA4;
+}
+body {background-color: skyblue;}
+</style>
+</head>
+
 <body>
-<p>hello</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<h1 align="center"><i>Tic Toc Toe</i></h1>
+<br>
+<br>
+<table align="center">
+  <tr>
+    <td ></td>
+    <td class="lrb"></td> 
+    <td ></td>
+  </tr>
+  <tr>
+    <td class="t"></td>
+    <td class="fullb"></td>
+    <td class="t"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="lrb"></td>
+    <td></td>
+  </tr>
+</table>
+<script>
+$("td").click(function(){
+alert("clicked");
+})
+</script>
 </body>
 </html>
